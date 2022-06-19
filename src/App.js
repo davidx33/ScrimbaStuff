@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Joke from './components/Joke';
 import data from "./components/Data"
 import Card from './components/Card';
+import Form from './components/Form';
 
 function App() {
   const cards = data.map(x => {
@@ -30,6 +31,7 @@ function App() {
       <Joke punchline = "sopra"/>
       <Contact name = "David" img = "./felix.png"/>
       <Contact  name = "Guitar" img = "./fluffykins.png"/>
+      <Form />
     </div>
   );
 }
