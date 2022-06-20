@@ -1,5 +1,7 @@
 
 function loginUser(email, password, callback) {
+    // callback is a function, what it will do with the argument
+    // provided is below
     setTimeout(() => {
         console.log("Now we have the data")
         callback({ userEmail: email })
@@ -19,4 +21,14 @@ function videoDetails(video, callback) {
     }, 2000)
 }
 
-const user = loginUser()
+const user = loginUser("thexudavid@gmail.com", 123, arg => {
+    console.log(arg);
+    getUserVideos("random email", "password", arr => {
+        console.log(arr)
+        videoDetails("random video", title => {
+            console.log(title)
+        })
+    })
+
+})
+
